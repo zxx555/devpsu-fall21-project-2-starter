@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parks Page</title>
+    </head>
+    <body>
+        
+        {% for park in parks %}
+            <p>{{ park.name }} National Park is located in {{ park.loc }}. {{ park.desc }}</p>
+        {% endfor %}
+        
+    </body>
+</html>

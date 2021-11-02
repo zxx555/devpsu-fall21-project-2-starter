@@ -1,6 +1,6 @@
 <template>
   <div class="custom-home">
-    <h3 class="cover-heading">To Do list</h3>
+    <h3 class="cover-heading">To Do List</h3>
     <List />
   </div>
 </template>

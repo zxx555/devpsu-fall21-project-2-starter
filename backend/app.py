@@ -26,6 +26,20 @@ TO_DO_LIST = [
     }
 ]
 
+SHOPPING = [
+	{
+		'item': 'Tomato',
+		'number': '2',
+		'completed': True,
+	},
+	{
+		'item': 'Potato',
+		'number': '5',
+		'completed': False,
+	}
+]
+
+
 # Handle Routing for the app
 @app.route('/')
 def hello_world():
@@ -65,6 +79,25 @@ def index():
 
     return jsonify(response_dict)
 
+@app.route('/shoppinglist', methods=['GET', 'POST'])
+def index():
+
+    response_dict = {
+        'status': 'success',
+        'message': '',
+        'shopping': SHOPPING
+    }
+
+    if request.method == 'POST':
+        # update the to do list
+        SHOPPING.clear()
+        SHOPPING.extend(request.get_json())
+        response_dict['message'] = 'List updated'
+    else:
+        # return default list
+        response_dict['message'] = 'List acquired'
+
+    return jsonify(response_dict)
 # If this file is executed, run the app
 if __name__ == "__main__":
     app.run()

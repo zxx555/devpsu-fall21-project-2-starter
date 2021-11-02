@@ -8,6 +8,9 @@
                 <router-link to="/todolist" class="nav-link" exact>
                     To Do List
                 </router-link>
+                <router-link to="/shoppinglist" class="nav-link" exact>
+                    Shopping List
+                </router-link>
             </nav>
         </div>
     </header>

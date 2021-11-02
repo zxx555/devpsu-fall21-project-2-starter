@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ToDoList from '../views/ToDoList.vue'
+import ShoppingList from '../views/ShoppingList.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,11 @@ export default new VueRouter({
       name: 'todolist',
       component: ToDoList
     },
+	{
+		path: '/shoppinglist',
+		name: 'shoppinglist',
+		component: ShoppingList
+	},
     {
       path: '*',
       redirect: '/'

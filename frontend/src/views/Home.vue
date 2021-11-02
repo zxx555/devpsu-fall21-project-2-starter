@@ -6,6 +6,9 @@
       <p class="lead">
         <router-link pill class="btn btn-lg custom-btn" to="/todolist">Manage list</router-link>
       </p>
+      <p class="lead">
+        <router-link pill="" class="btn btn-lg custom-btn" to="/shoppinglist">Shopping List</router-link>
+      </p>
     </main>
   </div>
 </template>
